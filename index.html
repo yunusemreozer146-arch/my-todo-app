@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Yunus Todo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="themeToggle" class="theme-toggle">🌙</div>
+
+<div class="container">
+
+  <!-- Üst başlık -->
+  <p class="sub-header">Bugün Yapılacak Neler Var?</p>
+
+  <!-- Mevcut başlık -->
+  <h1>Görevlerim</h1>
+
+  <p id="count">Toplam Görev: 0</p>
+
+  <div class="input-area">
+    <input id="taskInput" type="text" placeholder="Görev yaz...">
+    <button id="addBtn">Ekle</button>
+  </div>
+
+  <ul id="taskList"></ul>
+  <p id="emptyMsg">Henüz görev eklenmedi...</p>
+</div>
+
+<audio id="addSound" src="add.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #e7eef7;
+  color: #111;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  height: 100vh;
+  transition: 0.3s;
+}
+
+.container {
+  background: white;
+  margin-top: 80px;
+  padding: 25px;
+  border-radius: 14px;
+  width: 360px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+/* Üst başlık */
+.sub-header {
+  font-weight: bold;
+  color: #6b7280;
+  font-size: 16px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Görev ekleme alanı */
+.input-area {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.3s;
+}
+
+#addBtn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addBtn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+/* Görev Listesi */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+li {
+  background: #f1f5fb;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+  transition: background 0.3s, transform 0.2s;
+}
+
+li:hover {
+  background: #e0ebff;
+  transform: translateX(3px);
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.done-btn {
+  background: #22c55e;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.done-btn:hover {
+  background: #16a34a;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  transform: scale(1.1);
+}
+
+/* Dark Mode */
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 99;
+  transition: 0.3s;
+}
+
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+}
+
+body.dark li {
+  background: #2a2a2a;
+}
+
+body.dark li:hover {
+  background: #3a3a3a;
+}
+
+body.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark #addBtn {
+  background: #3b82f6;
+  color: white;
+}
+
+body.dark .done-btn {
+  background: #22c55e;
+}
+
+body.dark .delete-btn {
+  background: crimson;
+}
+
+body.dark .theme-toggle {
+  background: #2a2a2a;
+  color: white;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: -1;
+  opacity: 0.5;
+}
+
+body::before {
+  background: #60a5fa;
+  top: -50px;
+  left: -50px;
+}
+
+body::after {
+  background: #93c5fd;
+  bottom: -50px;
+  right: -50px;
+}
