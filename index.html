@@ -5,19 +5,23 @@
   <title>Yunus Todo</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+<!-- DARK TOGGLE -->
 <div id="themeToggle" class="theme-toggle">🌙</div>
 
+<!-- AUTH BOX -->
+<div class="auth-box">
+  <input type="email" id="emailInput" placeholder="Email">
+  <input type="password" id="passwordInput" placeholder="Şifre">
+  <button id="signUpBtn">Kayıt</button>
+  <button id="signInBtn">Giriş</button>
+  <button id="signOutBtn" style="display:none;">Çıkış</button>
+</div>
+
 <div class="container">
-
-  <!-- Üst başlık -->
   <p class="sub-header">Bugün Yapılacak Neler Var?</p>
-
-  <!-- Mevcut başlık -->
   <h1>Görevlerim</h1>
-
   <p id="count">Toplam Görev: 0</p>
 
   <div class="input-area">
@@ -31,6 +35,6 @@
 
 <audio id="addSound" src="add.mp3"></audio>
 
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>
